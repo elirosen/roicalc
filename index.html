@@ -11,15 +11,15 @@
 	How many techs do you have? <input type="range" id="techSliderInput" min="0" max="100" value="5" oninput="displayTechSliderValue()"><span id="displayTechSliderValueHere">5</span> techs<br>
 	On average, how many jobs do you do per month during busy season? <input type="range" id="jobSliderInput" min="5" max="10000" step="15" value="5" oninput="displayJobSliderValue()"><span id="displayJobSliderValueHere">5</span> jobs<br>
 
-	What kind of work do you do?<input type="text" ><br>
-	<input type="submit" value="Calculate!" onclick="calculateTotal()">	
+	What kind of work do you do?<input type="text" ><br><br>
+	<input type="submit" value="Click to Calculate!" style="height:2em; width:10em; background-color:#1895cc; color:white; font-size:.8em" onclick="calculateTotal()">	
 	<div style="clear:both"></div>
 	</div>	
 </form>
 
 <div id="calcResult">
 	<h2>Your will save:</h2>
-	<h1>$<span id="displayResultsHere"></span> with Dispatch</h1>
+	<h1><span id="displayResultsHere"></span></h1>
 </div>
 <script>
 	var numberOfTechs;
@@ -42,7 +42,7 @@
 	function calculateTotal(){
 		numberOfTechs = document.getElementById("techSliderInput").value;
 		jobsPerMonth = document.getElementById("jobSliderInput").value;
-		calculatedValuetoDisplay = (numberOfTechs * techsMultiplier) + (jobsPerMonth * jobsPerMonthMultiplier); 
+		calculatedValuetoDisplay = "$"+(numberOfTechs * techsMultiplier) + (jobsPerMonth * jobsPerMonthMultiplier) + " with Dispatch"; 
 	//document.getElementById("displayResultsHere").innerHTML = "it works";
 		document.getElementById("displayResultsHere").innerHTML = calculatedValuetoDisplay;
 		console.log("number of techs: " + numberOfTechs);
