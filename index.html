@@ -9,7 +9,7 @@
 <form id="form" onsubmit="return false;" style="position:relative; width:100%">
 	<div id="buttons">
 	How many techs do you have? <input type="range" id="techSliderInput" min="0" max="100" value="5" oninput="displayTechSliderValue()"><span id="displayTechSliderValueHere">5</span> techs<br>
-	On average, how many jobs do you do per month during busy season? <input type="range" id="jobSliderInput" min="5" max="10000" value="5" oninput="displayJobSliderValue()"><span id="displayJobSliderValueHere">5</span> jobs<br>
+	On average, how many jobs do you do per month during busy season? <input type="range" id="jobSliderInput" min="5" max="10000" step="15" value="5" oninput="displayJobSliderValue()"><span id="displayJobSliderValueHere">5</span> jobs<br>
 
 	What kind of work do you do?<input type="text" ><br>
 	<input type="submit" value="Calculate!" onclick="calculateTotal()">	
